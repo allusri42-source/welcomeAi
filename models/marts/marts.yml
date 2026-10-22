@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: "Customer dimension with order and spending metrics"
+    columns:
+      - name: customer_id
+        description: "Unique customer identifier"
+        data_tests:
+          - unique
+          - not_null
+
+      - name: total_orders
+        description: "Number of orders placed by the customer"
+        data_tests:
+          - not_null
+
+  - name: fct_orders
+    description: "Order-level fact table for analytics"
+    columns:
+      - name: order_id
+        description: "Unique order identifier"
+        data_tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        data_tests:
+          - not_null
+
+      - name: amount
+        data_tests:
+          - not_null
