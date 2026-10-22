@@ -1,4 +1,4 @@
-// mart models
+-- Test Relium PR review
 select
     o.order_id,
     o.customer_id,
