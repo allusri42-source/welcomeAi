@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: ecommerce
+    description: "Raw e-commerce data loaded from dbt seeds"
+    tables:
+      - name: raw_customers
+        description: "Raw customer records"
+        columns:
+          - name: customer_id
+            description: "Unique customer identifier"
+
+      - name: raw_orders
+        description: "Raw order records"
+        columns:
+          - name: order_id
+            description: "Unique order identifier"
